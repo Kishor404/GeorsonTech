@@ -1,9 +1,16 @@
-import '../styles/About.css';
-
+import AboutIntro from "../components/About/AboutIntro";
+import Timeline from "../components/About/Timeline";
+import Features from "../components/About/Features";
+import Stats from "../components/About/Stats";
+import "../styles/about.css";
 function About() {
-  return(
+  return (
     <>
-        <p>About</p>
+      <AboutIntro />
+      <Timeline />
+      <Stats/>
+      <Features />
+      
     </>
   );
 }
