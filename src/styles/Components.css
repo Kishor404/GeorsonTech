@@ -1,0 +1,103 @@
+/* Base Navbar Container */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  background-color: #008cdb; /* Matched to the blue in the image */
+  height: 80px;
+  position: relative;
+  padding: 0 5%; /* Adds the blue padding on the far left and right */
+  box-sizing: border-box;
+}
+
+/* Left side with the white logo block */
+.navbar-left {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo-wrapper {
+  background-color: #ffffff;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+}
+
+.navbar-logo {
+  max-height: 30px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Navigation Links */
+.navbar-links {
+  display: flex;
+  margin-left: auto;
+  gap: 30px;
+}
+
+.navbar-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: opacity 0.3s ease;
+}
+
+.navbar-links a:hover {
+  opacity: 0.8;
+}
+
+/* Hamburger Menu (Hidden by default) */
+.navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.navbar-hamburger .navbar-bar {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design for Tablets & Mobile */
+@media (max-width: 968px) {
+  .navbar-container {
+    padding: 0 20px;
+  }
+
+  .navbar-logo-wrapper {
+    padding: 0 20px;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    position: absolute;
+    top: 80px; /* Matches navbar height */
+    left: -100%;
+    width: 100%;
+    background-color: #007bbd; /* Slightly darker blue for dropdown */
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    padding: 20px 0;
+    gap: 20px;
+    z-index: 1000;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+  }
+
+  .navbar-links.active {
+    left: 0;
+  }
+
+  .navbar-hamburger {
+    display: flex;
+  }
+}
