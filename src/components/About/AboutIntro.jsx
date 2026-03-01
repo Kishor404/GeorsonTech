@@ -10,7 +10,6 @@ function AboutIntro() {
     </div>
 
     <div className="about-content" data-aos="fade-left">
-      <span className="about-subtitle">Georson Tech Pvt. Ltd</span>
       <h2 className="about-title">ABOUT US</h2>
 
           <p>
