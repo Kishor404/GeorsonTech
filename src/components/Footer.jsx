@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../assets/Logo/Georson.png';
-import '../styles/components.css';
+import '../styles/Components.css';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
