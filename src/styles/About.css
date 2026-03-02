@@ -163,6 +163,7 @@
 
 .about-timeline-container {
   position: relative;
+  width: 100%;
 }
 
 /* CENTER LINE */
@@ -179,22 +180,24 @@
 
 /* ITEM */
 .about-timeline-item {
-  padding: 40px 0;
   position: relative;
   width: 50%;
+  padding: 40px 40px;
+  box-sizing: border-box;
 }
 
 /* LEFT SIDE */
 .about-timeline-item.about-left {
   left: 0;
-  padding-right: 70px;
   text-align: right;
+  padding-right: 80px;
 }
 
 /* RIGHT SIDE */
 .about-timeline-item.about-right {
   left: 50%;
-  padding-left: 70px;
+  text-align: left;
+  padding-left: 80px;
 }
 
 /* CARD */
