@@ -1,0 +1,489 @@
+/* ============ HERO SECTION ============ */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+}
+
+.hero-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  background-color: black;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-overlay h1 {
+  font-size: 25pt;
+  font-weight: 600;
+  margin: 0;
+}
+
+.hero-overlay h2 {
+  font-size: 15pt;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.hero-btn {
+  background-color: #1565c0;
+  border: none;
+  padding: 14px 40px;
+  font-size: 1rem;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.hero-btn:hover {
+  background-color: #1565c0;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .hero-overlay h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-overlay h2 {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* ======== GROUP OF COMPANY ========= */
+
+
+.group-section {
+  padding: 80px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.group-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e73be;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+.group-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.group-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  width: 500px;
+  text-align: left;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.group-card:hover {
+  transform: translateY(-5px);
+}
+
+.group-logo {
+  margin-bottom: 25px;
+  text-align: center;
+
+}
+
+.group-logo img {
+  height: 70px;
+  object-fit: contain;
+}
+
+.group-card p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+  .group-card {
+    width: 100%;
+  }
+}
+
+
+/* ================= INTRO ================= */
+
+.home-section{
+  background:#ffffff;
+  padding:100px 0;
+  font-family:"Poppins",sans-serif;
+}
+
+.home-container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+.home-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:start;
+}
+
+.home-img img{
+  width:100%;
+  transition:.4s;
+}
+
+.home-img img:hover{
+  transform:scale(1.05);
+}
+
+.home-content{
+    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.home-content p{
+  color:#292929;
+  margin-top:15px;
+  line-height:1.8;
+  text-align:justify;
+  hyphens:auto;
+  font-size:15.5px;
+  font-family: "Poppins", sans-serif;
+}
+
+.home-title{
+  font-size:30px;
+  font-weight:700;
+  color:#0070b1;
+  margin: 0;
+  margin-bottom:25px;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+}
+
+.home-about-but{
+    background-color: #1565c0;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+}
+.home-about-but:hover{
+    border: 2px solid #1a77e2;
+    background-color: #1a77e2;
+
+}
+
+
+/* ======== GOALS IN NUMBER ========= */
+
+.goal-section {
+  position: relative;
+  color: white;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+}
+
+.goal-overlay {
+  background: rgba(0, 0, 0, 0.65);
+  padding: 80px 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.goal-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+}
+
+.goal-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.goal-card {
+  background: white;
+  width: 200px;
+  padding: 35px 20px;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px dashed #1e73be;
+  transition: 0.3s ease;
+}
+
+.goal-card:hover {
+  transform: translateY(-6px);
+}
+
+.goal-icon {
+  font-size: 40px;
+  color: #1e73be;
+  margin-bottom: 15px;
+}
+
+.goal-card h3 {
+  font-size: 24px;
+  color: #1e73be;
+  margin-bottom: 8px;
+}
+
+.goal-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .goal-container {
+    gap: 20px;
+  }
+
+  .goal-card {
+    width: 160px;
+    padding: 25px 15px;
+  }
+}
+
+/* ========= OUR PRODUCTS ========= */
+
+.products-section {
+  background-color: #f4f4f4;
+  padding: 80px 20px;
+  text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.products-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1e73be;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+.products-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.product-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.product-card p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.products-btn-wrapper {
+  margin-top: 50px;
+}
+
+.products-btn {
+  background-color: #1e73be;
+  color: white;
+  border: none;
+  padding: 12px 35px;
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.products-btn:hover {
+  background-color: #155a96;
+}
+
+@media (max-width: 992px) {
+  .products-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .products-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ======== DEAL WITH GLOBAL BRANDS ========= */
+
+.brand-section {
+    height: 40vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+  font-family: "Poppins", sans-serif;
+
+}
+
+.brand-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.brand-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.brand-card {
+  background: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  min-width: 150px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.brand-card:hover {
+  transform: translateY(-5px);
+}
+
+.brand-card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.brand-slider {
+  max-width: 1100px;
+}
+
+.brand-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.brand-card img {
+  max-height: 50px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .brand-container {
+    gap: 20px;
+  }
+
+  .brand-card {
+    min-width: 120px;
+    height: 60px;
+    padding: 10px 20px;
+  }
+}
