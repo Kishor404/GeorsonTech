@@ -23,7 +23,7 @@ function App() {
     >
       <Navbar />
 
-      <div style={{ flex: 1 }}>
+      <div className="main-content">
         <Routes>
 
           <Route path="/" element={<Home />} />

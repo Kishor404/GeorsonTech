@@ -1,3 +1,7 @@
+.main-content {
+  flex: 1;
+  padding-top: 80px; /* equal to navbar height */
+}
 
 /* ========= NAVBAR ======== */
 
@@ -5,10 +9,16 @@
 .navbar-container {
   display: flex;
   align-items: center;
-  background-color: #008cdb; /* Matched to the blue in the image */
+  background-color: #008cdb;
   height: 80px;
-  position: relative;
-  padding: 0 5%; /* Adds the blue padding on the far left and right */
+
+  position: fixed;     /* ✅ Make it fixed */
+  top: 0;              /* ✅ Stick to top */
+  left: 0;
+  width: 100%;         /* ✅ Full width */
+  z-index: 9999;       /* ✅ Stay above all content */
+
+  padding: 0 5%;
   box-sizing: border-box;
 }
 
