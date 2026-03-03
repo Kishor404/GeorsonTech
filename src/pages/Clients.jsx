@@ -1,11 +1,7 @@
-import '../styles/Clients.css';
+import ClientsBody from "../components/Clients/ClientsBody";
 
 function Clients() {
-  return(
-    <>
-        <p>Clients</p>
-    </>
-  );
+  return <ClientsBody />;
 }
 
 export default Clients;

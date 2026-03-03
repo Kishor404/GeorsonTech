@@ -1,9 +1,9 @@
-import '../styles/Brands.css';
+import BrandsBody from "../components/Brands/BrandsBody";
 
 function Brands() {
-  return(
+  return (
     <>
-        <p>Brands</p>
+      <BrandsBody />
     </>
   );
 }
