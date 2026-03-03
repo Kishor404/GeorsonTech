@@ -1,0 +1,130 @@
+/* MAIN WRAPPER */
+.services-wrapper {
+  padding: 80px 20px;
+  background: #f4f7fb;
+}
+
+/* CONTAINER */
+.services-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* HEADING */
+.services-heading {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #0f172a;
+}
+
+.services-heading-bar {
+  width: 4px;
+  height: 28px;
+  background: linear-gradient(180deg, #2563eb, #38bdf8);
+  display: inline-block;
+  border-radius: 4px;
+}
+
+/* GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+/* CARD */
+.services-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.35s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  cursor: pointer;
+  position: relative;   
+  overflow: hidden; 
+}
+.services-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  padding: 1.5px;
+  background: linear-gradient(120deg, #2563eb, #00c6ff);
+
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+
+  mask: 
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  mask-composite: exclude;
+
+  opacity: 0;
+  transition: 0.35s;
+}
+
+.services-card:hover::before {
+  opacity: 1;
+}
+
+.services-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+}
+
+/* IMAGE */
+.services-image-box {
+  overflow: hidden;
+  border-radius: 14px;
+}
+.services-image-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+/* ONLY ZOOM — NO OVERLAY */
+.services-card:hover img {
+  transform: scale(1.08);
+}
+
+/* TITLE */
+.services-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2563eb;
+  margin-top: 15px;
+  line-height: 1.4;
+  transition: 0.3s;
+}
+
+.services-card:hover .services-title {
+  color: #1e40af;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-heading {
+    font-size: 24px;
+    justify-content: center;
+  }
+}

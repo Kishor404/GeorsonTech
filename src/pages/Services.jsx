@@ -1,11 +1,7 @@
-import '../styles/Services.css';
+import ServicesBody from "../components/Services/ServicesBody";
 
 function Services() {
-  return(
-    <>
-        <p>Services</p>
-    </>
-  );
+  return <ServicesBody />;
 }
 
 export default Services;
