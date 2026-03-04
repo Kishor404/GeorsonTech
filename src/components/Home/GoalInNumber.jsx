@@ -4,7 +4,9 @@ import goalinnumImg from "../../assets/Home/goalinnumImg.png"
 
 function GoalInNumber() {
   return (
-    <section className="goal-section" style={{ backgroundImage: `url(${goalinnumImg})` }}>
+    <section className="goal-section">
+
+      <img src={goalinnumImg}/>
 
       <div className="goal-overlay">
         <h2 className="goal-title">OUR GOALS IN NUMBER</h2>

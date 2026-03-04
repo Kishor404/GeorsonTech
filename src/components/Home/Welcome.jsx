@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import homeImg from "../../assets/Home/welcome.jpg";
 
 function Welcome() {
@@ -39,7 +40,8 @@ function Welcome() {
             </div>
 
             <div>
-              <a className="home-about-but" href="/about">Learn More</a>
+              <Link to="/about"  className="home-about-but" >Learn More</Link>
+
             </div>
               
         </div>

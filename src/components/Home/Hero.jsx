@@ -4,6 +4,7 @@ import "../../styles/Home.css";
 import Hero1 from '../../assets/Home/Hero/hero1.png';
 import Hero2 from '../../assets/Home/Hero/hero2.png';
 import Hero3 from '../../assets/Home/Hero/hero3.png';
+import { Link } from "react-router-dom";
 
 const slides = [
   {
@@ -51,7 +52,8 @@ function Hero() {
           <div className="hero-overlay">
             <h1>{slide.title}</h1>
             <h2>{slide.subtitle}</h2>
-            <a className="hero-btn" href={slide.navigate}>{slide.button}</a>
+            <Link to={slide.navigate}  className="hero-btn" >{slide.button}</Link>
+            
           </div>
         </div>
       ))}

@@ -81,8 +81,19 @@
   transition: all 0.3s ease;
 }
 
+@media (max-width: 1200px) {
+  .navbar-links a {
+    font-size: 12px;
+  }
+}
+
 /* Responsive Design for Tablets & Mobile */
 @media (max-width: 968px) {
+  .navbar-links a{
+    color: black;
+    font-size: 15px;
+    padding: 10px;
+  }
   .navbar-container {
     padding: 0 20px;
   }
@@ -95,9 +106,9 @@
     flex-direction: column;
     position: absolute;
     top: 80px; /* Matches navbar height */
-    left: -100%;
-    width: 100%;
-    background-color: #007bbd; /* Slightly darker blue for dropdown */
+    right: -100%;
+    width: 50%;
+    background-color: #fafafa;
     text-align: center;
     transition: 0.3s ease-in-out;
     padding: 20px 0;
@@ -107,7 +118,7 @@
   }
 
   .navbar-links.active {
-    left: 0;
+    right: 0;
   }
 
   .navbar-hamburger {
@@ -115,6 +126,24 @@
   }
 }
 
+@media (max-width: 550px) {
+  .navbar-logo-wrapper a img{
+    max-height: 20px;
+  }
+  .navbar-hamburger .navbar-bar{
+    width: 20px;
+    height: 2px;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .navbar-links a{
+    color: black;
+    font-size: 12px;
+    padding: 10px;
+  }
+}
 
 /* ========== FOOTER ============ */
 

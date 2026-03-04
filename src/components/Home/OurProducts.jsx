@@ -1,5 +1,6 @@
 import "../../styles/Home.css";
 import productImg from "../../assets/Home/goalinnumImg.png";
+import { Link } from "react-router-dom";
 
 function OurProducts() {
 
@@ -46,7 +47,7 @@ function OurProducts() {
       </div>
 
       <div className="products-btn-wrapper">
-        <button className="products-btn">Show More</button>
+        <Link to="/services"  className="products-btn" >Show More</Link>
       </div>
 
     </section>
