@@ -3,9 +3,15 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import "../styles/Contact.css";
 
+import TitleBar from "../components/TitleBar";
+import ContactTitleImg from "../assets/Contact/titleImg.png";
+
 function Contact() {
   return (
     <div className="contact-page">
+
+      <TitleBar title="CONTACT US" bg={ContactTitleImg}/>
+
 
       <div className="contact-wrapper">
 

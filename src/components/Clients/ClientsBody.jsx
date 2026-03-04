@@ -11,6 +11,7 @@ import MARCUS from "../../assets/Clients/MARCUS.jpeg";
 import NORBAR from "../../assets/Clients/NORBAR.png";
 import RADIANT from "../../assets/Clients/RADIANT.png";
 import RAMCO from "../../assets/Clients/RAMCO.jpeg";
+import TitleBar from "../TitleBar";
 const clients = [
   { img: ABB, name: "ABB" },
   { img: AIRTRONIC, name: "AIRTRONIC" },
@@ -24,14 +25,14 @@ const clients = [
   { img: RADIANT, name: "RADIANT" },
   { img: RAMCO, name: "RAMCO" },
 ];
+
+import ClientsTitleImg from "../../assets/Clients/titleImg.png";
+
 function ClientsBody() {
   return (
     <div className="clients-wrapper">
+      <TitleBar title="CLIENTS" bg={ClientsTitleImg}/>
       <div className="clients-container">
-
-        <h2 className="clients-heading">
-          <span className="clients-heading-bar"></span> CLIENTS
-        </h2>
 
         <div className="clients-grid">
           {clients.map((client, index) => (

@@ -249,3 +249,46 @@
     text-align: center;
   }
 }
+
+
+
+/* ========== TITLE BAR ============ */
+
+.comp-titlebar{
+  width: 100%;
+  height: 25vh;
+  position: relative;
+}
+
+.comp-titlebar .comp-title-img-cont{
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+
+.comp-titlebar .comp-title-img-cont img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.2);
+}
+
+.comp-title-p-cont{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comp-title-p-cont p{
+  color: white;
+  font-size: 32pt;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  border-left: 10px solid white;
+  margin: 0;
+  padding: 0px 30px;
+}

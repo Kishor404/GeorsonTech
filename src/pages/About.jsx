@@ -3,11 +3,13 @@ import Timeline from "../components/About/Timeline";
 import Features from "../components/About/Features";
 import Stats from "../components/About/Stats";
 import "../styles/About.css";
-import AboutTitleBar from "../components/About/AboutTitleBar";
+import TitleBar from "../components/TitleBar";
+import AboutTitleImg from "../assets/About/titleImg.png";
+
 function About() {
   return (
     <>
-      <AboutTitleBar/>
+      <TitleBar title="ABOUT US" bg={AboutTitleImg}/>
       <AboutIntro />
       <Timeline />
       <Stats/>

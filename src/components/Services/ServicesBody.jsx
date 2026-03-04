@@ -26,11 +26,6 @@ function ServicesBody() {
   return (
     <div className="services-wrapper">
       <div className="services-container">
-
-        <h2 className="services-heading">
-          <span className="services-heading-bar"></span> SERVICES
-        </h2>
-
         <div className="services-grid">
           {services.map((service, index) => (
             <div className="services-card" key={index} data-aos="fade-up">
