@@ -1,0 +1,57 @@
+/* Container for the whole section */
+.gallery-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.gallery-title {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* The Masonry Grid */
+.gallery-container {
+  /* Defines the number of columns on desktop */
+  column-count: 3;
+  column-gap: 15px;
+}
+
+.gallery-item {
+  /* Prevents the image container from breaking across columns */
+  break-inside: avoid;
+  margin-bottom: 15px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block; /* Removes the small gap under inline images */
+  border-radius: 4px; /* Optional: Gives a slight rounding to the corners */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Optional hover effect */
+.gallery-item img:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive Design Breakpoints */
+
+/* Tablet & Smaller Laptops */
+@media (max-width: 992px) {
+  .gallery-container {
+    column-count: 2;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+  .gallery-container {
+    column-count: 1;
+  }
+}
