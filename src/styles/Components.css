@@ -144,142 +144,119 @@
     padding: 10px;
   }
 }
-
 /* ========== FOOTER ============ */
 
-/* --- Footer Styles --- */
-
+/* --- Base Footer Styles --- */
 .footer-container {
-  background-color: #1e293b; /* Dark slate blue */
-  color: #f1f5f9;
+  background-color: #000000; /* Solid black background */
+  color: #cbd5e1; /* Light gray text */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding-top: 50px;
-  margin-top: auto; /* Helps push footer to bottom if body is flex */
+  padding-top: 60px; /* Padding for the top part */
+  margin-top: auto;
+  text-align: center;
 }
 
 .footer-content {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1500px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 0 0%;
-  gap: 40px;
-}
-
-.footer-section {
-  flex: 1;
-  min-width: 250px;
+  padding: 0 20px;
+  gap: 30px; /* Space between logo and text */
 }
 
 /* Brand Section */
 .footer-logo-wrapper {
-  background-color: #ffffff;
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 4px;
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-logo {
-  max-height: 40px;
+  max-height: 45px;
   width: auto;
   display: block;
 }
 
-.footer-description {
+/* Contact Info */
+.footer-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-contact-info p {
+  margin: 0;
   line-height: 1.6;
-  color: #cbd5e1;
   font-size: 15px;
 }
 
-/* Headings for Sections */
-.footer-section h3 {
-  color: #008cdb; /* Matching the navbar blue */
-  font-size: 18px;
-  margin-bottom: 20px;
-  position: relative;
-  padding-bottom: 10px;
+.footer-contact-info a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.footer-section h3::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 40px;
-  height: 2px;
-  background-color: #008cdb;
+.footer-contact-info a:hover {
+  color: #008cdb;
 }
 
-/* Quick Links */
-.links-section ul {
-  list-style: none;
-  padding: 0;
+/* Copyright & Developer Bottom Bar */
+.footer-bottom {
+  margin-top: 50px;
+  padding: 20px 15px;
+  border-top: 1px solid #1f2937; /* Very subtle line to separate content */
+  font-size: 13px;
+  color: #6b7280; /* Slightly dimmer text for the bottom bar */
+}
+
+.footer-bottom p {
   margin: 0;
 }
 
-.links-section li {
-  margin-bottom: 12px;
-}
+/* --- Responsive Adjustments --- */
 
-.links-section a {
-  color: #cbd5e1;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  font-size: 15px;
-}
-
-.links-section a:hover {
-  color: #008cdb;
-}
-
-/* Contact Info */
-.contact-details p {
-  margin-bottom: 15px;
-  line-height: 1.6;
-  font-size: 15px;
-  color: #cbd5e1;
-}
-
-.contact-details a {
-  color: #cbd5e1;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.contact-details a:hover {
-  color: #008cdb;
-}
-
-/* Copyright Bottom Bar */
-.footer-bottom {
-  background-color: #0f172a; /* Darker shade for the bottom bar */
-  text-align: center;
-  padding: 20px 5%;
-  margin-top: 40px;
-  font-size: 14px;
-  color: #94a3b8;
-}
-
-/* Responsive Adjustments */
+/* For Tablets and Small Desktops */
 @media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    gap: 30px;
+  .footer-container {
+    padding-top: 40px;
   }
-  
-  .footer-section h3::after {
-    left: 50%;
-    transform: translateX(-50%);
+
+  .footer-logo {
+    max-height: 35px; /* Scale logo down slightly */
   }
-  
-  .footer-section {
-    text-align: center;
+
+  .footer-contact-info p {
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    margin-top: 35px;
   }
 }
 
+/* For Mobile Phones */
+@media (max-width: 480px) {
+  .footer-contact-info {
+    gap: 18px; /* Increases tap target space for links on touch screens */
+  }
+  
+  .footer-contact-info p {
+    word-break: break-word; /* Ensures long email addresses don't break the layout */
+  }
 
+  /* Stack the copyright and developer text cleanly on tiny screens */
+  .footer-bottom p {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .footer-bottom .divider {
+    display: none; /* Hides the "|" separator on mobile */
+  }
+}
 
 /* ========== TITLE BAR ============ */
 
