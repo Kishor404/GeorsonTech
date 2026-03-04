@@ -34,6 +34,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 35px;
+  margin-bottom: 100px;
 }
 /* CARD */
 .services-card {
@@ -109,6 +110,13 @@
 
 .services-card:hover .services-title {
   color: #1e40af;
+}
+
+.services-section-title{
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 60px;
+  text-align: center;
 }
 
 /* RESPONSIVE */
