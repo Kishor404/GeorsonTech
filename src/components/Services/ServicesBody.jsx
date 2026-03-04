@@ -1,14 +1,14 @@
 import "../../styles/Services.css";
 
-import industrialAutomationProject from "../../assets/services/Industrial Automation Project.jpg";
-import consultancyElectricalMechanicalCivil from "../../assets/services/Consultancy in Electrical Mechanical Civil Works.jpg";
-import cncPlcInstallation from "../../assets/services/CNC PLC Machine Installation.jpg";
-import spmRetrofit from "../../assets/services/SPM Machines Retrofit Services.jpg";
-import customIiot from "../../assets/services/Automation Custom Designed IIoT Products.jpg";
-import bmsIndustry4 from "../../assets/services/Enhancing Conventional Automation BMS into Industry 4.0.jpg";
-import scadaSoftware from "../../assets/services/Provide Software Solutions Complement to SCADA.jpg";
-import hydraulicPress from "../../assets/services/Mech Hydraulic Press Service.jpg";
-import robotPickPlace from "../../assets/services/Robot Pick Place Automation.jpg";
+import industrialAutomationProject from "../../assets/Services/Industrial Automation Project.jpg";
+import consultancyElectricalMechanicalCivil from "../../assets/Services/Consultancy in Electrical Mechanical Civil Works.jpg";
+import cncPlcInstallation from "../../assets/Services/CNC PLC Machine Installation.jpg";
+import spmRetrofit from "../../assets/Services/SPM Machines Retrofit Services.jpg";
+import customIiot from "../../assets/Services/Automation Custom Designed IIoT Products.jpg";
+import bmsIndustry4 from "../../assets/Services/Enhancing Conventional Automation BMS into Industry 4.0.jpg";
+import scadaSoftware from "../../assets/Services/Provide Software Solutions Complement to SCADA.jpg";
+import hydraulicPress from "../../assets/Services/Mech Hydraulic Press Service.jpg";
+import robotPickPlace from "../../assets/Services/Robot Pick Place Automation.jpg";
 
 const services = [
   { img: industrialAutomationProject, title: "Industrial Automation Project" },
