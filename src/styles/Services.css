@@ -8,6 +8,7 @@
 .services-container {
   max-width: 1200px;
   margin: auto;
+  font-family: "Poppins", sans-serif;
 }
 
 /* HEADING */
@@ -24,7 +25,6 @@
 .services-heading-bar {
   width: 4px;
   height: 28px;
-  background: linear-gradient(180deg, #2563eb, #38bdf8);
   display: inline-block;
   border-radius: 4px;
 }
@@ -52,8 +52,8 @@
   position: absolute;
   inset: 0;
   border-radius: 18px;
-  padding: 1.5px;
-  background: linear-gradient(120deg, #2563eb, #00c6ff);
+  padding: 3px;
+  background: #008cdb;
 
   -webkit-mask: 
     linear-gradient(#fff 0 0) content-box,
@@ -99,9 +99,9 @@
 
 /* TITLE */
 .services-title {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
-  color: #2563eb;
+  color: rgb(48, 48, 48);
   margin-top: 15px;
   line-height: 1.4;
   transition: 0.3s;
