@@ -79,13 +79,8 @@
   position: absolute;
   inset: 0;
   border-radius: 18px;
-  padding: 1.5px;
-  background: linear-gradient(
-    120deg,
-    #2563eb,
-    #00c6ff,
-    #2563eb
-  );
+  padding: 3px;
+  background: #008cdb;
 
   background-size: 300% 300%;
 
