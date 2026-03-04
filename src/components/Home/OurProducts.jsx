@@ -1,36 +1,32 @@
 import "../../styles/Home.css";
-import productImg from "../../assets/Home/goalinnumImg.png";
 import { Link } from "react-router-dom";
+
+// OWN PRODUCTS
+import containerStool1 from "../../assets/Services/OWN_PRODUCTS/CONTAINER STOOL 1.jpeg";
+import containerStool2 from "../../assets/Services/OWN_PRODUCTS/CONTAINER STOOL 2.jpeg";
+import esdTable from "../../assets/Services/OWN_PRODUCTS/ESD TABLE & FLOOR.jpg";
+import heightAdjustWorkstation from "../../assets/Services/OWN_PRODUCTS/HEIGHT ADJUST WORKSTATION.jpg";
+import isolationBreaker from "../../assets/Services/OWN_PRODUCTS/ISOLATION BREAKER TROLLEY.JPG";
+import ltPanel from "../../assets/Services/OWN_PRODUCTS/LT PANEL 1.JPEG";
+import lvPanel from "../../assets/Services/OWN_PRODUCTS/LV PANEL 2.jpg";
+import modularTapoff from "../../assets/Services/OWN_PRODUCTS/MODULAR TAPOFF PANEL.JPG";
+import safetyBarricade from "../../assets/Services/OWN_PRODUCTS/Safety barricade.jpeg";
+import testingPanel from "../../assets/Services/OWN_PRODUCTS/TESTING PANEL.JPEG";
 
 function OurProducts() {
 
   const products = [
-    {
-      title: "Industrial Automation Project",
-      image: productImg
-    },
-    {
-      title: "Industrial Automation Project",
-      image: productImg
-    },
-    {
-      title: "Industrial Automation Project",
-      image: productImg
-    },
-    {
-      title: "Industrial Automation Project",
-      image: productImg
-    },
-    {
-      title: "Industrial Automation Project",
-      image: productImg
-    },
-    {
-      title: "Industrial Automation Project",
-      image: productImg
-    },
-
-  ]
+    { img: containerStool1, title: "Container Stool" },
+    { img: containerStool2, title: "Container Stool Variant" },
+    { img: esdTable, title: "ESD Table & Flooring System" },
+    { img: heightAdjustWorkstation, title: "Height Adjustable Workstation" },
+    { img: isolationBreaker, title: "Isolation Breaker Trolley" },
+    { img: ltPanel, title: "LT Electrical Panel" },
+    { img: lvPanel, title: "LV Electrical Panel" },
+    { img: modularTapoff, title: "Modular Tapoff Panel" },
+    { img: safetyBarricade, title: "Industrial Safety Barricade" },
+    { img: testingPanel, title: "Electrical Testing Panel" }
+  ];
 
   return (
     <section className="products-section">
@@ -40,7 +36,7 @@ function OurProducts() {
       <div className="products-container">
         {products.map((item, index) => (
           <div className="product-card" key={index}>
-            <img src={item.image} alt={item.title} />
+            <img src={item.img} alt={item.title} />
             <p>{item.title}</p>
           </div>
         ))}
