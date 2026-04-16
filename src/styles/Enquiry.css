@@ -1,0 +1,128 @@
+/* ===== FLOAT BUTTON (RIGHT SIDE) ===== */
+.enquiry-float {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background: #008cdb;
+  color: #fff;
+
+  padding: 14px 8px;
+  font-weight: 600;
+  font-size: 14px;
+
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+
+  border-radius: 8px 0 0 8px;
+  cursor: pointer;
+
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.enquiry-float:hover {
+  background: #008cdb;
+}
+
+/* ===== OVERLAY ===== */
+.enquiry-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 10000;
+}
+
+/* ===== MODAL BOX ===== */
+.enquiry-box {
+  background: #fff;
+  padding: 30px;
+  width: 350px;
+  max-width: 90%;
+
+  border-radius: 10px;
+  position: relative;
+
+  animation: popup 0.3s ease;
+}
+
+/* POPUP ANIMATION */
+@keyframes popup {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ===== CLOSE BUTTON ===== */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  font-size: 22px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* ===== FORM ===== */
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+/* INPUTS */
+.enquiry-form input,
+.enquiry-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* BUTTON */
+.enquiry-form button {
+  background: #008cdb;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.enquiry-form button:hover {
+  background: #006fb3;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+
+  .enquiry-box {
+    padding: 20px;
+  }
+
+  .enquiry-float {
+    font-size: 12px;
+    padding: 10px 6px;
+  }
+}

@@ -1,15 +1,17 @@
 import { Routes, Route } from "react-router-dom";
 
+import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
+import TopBar from "./components/TopBar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
-import Brands from "./pages/Brands";
+// ❌ removed Brands import
 import Clients from "./pages/Clients";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
+
 import NotFound from "./pages/NotFound";
 
 function App() {
@@ -21,7 +23,10 @@ function App() {
         minHeight: "100vh",
       }}
     >
+      <TopBar />
+      <ScrollToTop />
       <Navbar />
+      
 
       <div className="main-content">
         <Routes>
@@ -32,7 +37,8 @@ function App() {
 
           <Route path="/services" element={<Services />} />
 
-          <Route path="/brands" element={<Brands />} />
+          {/* ❌ REMOVE THIS COMPLETELY */}
+          {/* <Route path="/brands" element={<Brands />} /> */}
 
           <Route path="/clients" element={<Clients />} />
 
@@ -46,7 +52,6 @@ function App() {
       </div>
 
       <Footer />
-
     </div>
   );
 }

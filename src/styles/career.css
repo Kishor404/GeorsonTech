@@ -1,0 +1,39 @@
+.career-section {
+  padding: 60px 20px;
+  background: #f5f7fb;
+  text-align: center;
+}
+
+.career-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.career-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.career-form input,
+.career-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.career-form button {
+  background: #008cdb;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.status {
+  margin-top: 10px;
+  font-size: 14px;
+}

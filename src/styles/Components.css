@@ -1,27 +1,37 @@
 .main-content {
   flex: 1;
-  padding-top: 80px; /* equal to navbar height */
+  padding-top: 110px; /* ✅ TopBar + Navbar */
 }
-
 /* ========= NAVBAR ======== */
 
-/* Base Navbar Container */
 .navbar-container {
   display: flex;
   align-items: center;
-  background-color: #008cdb;
+
+  position: fixed;
+  top: 30px; /* below TopBar */
+  left: 0;
+  width: 100%;
   height: 80px;
 
-  position: fixed;     /* ✅ Make it fixed */
-  top: 0;              /* ✅ Stick to top */
-  left: 0;
-  width: 100%;         /* ✅ Full width */
-  z-index: 9999;       /* ✅ Stay above all content */
+  background: #008cdb;
+  z-index: 9999;
 
   padding: 0 5%;
   box-sizing: border-box;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+  transition: all 0.3s ease; /* 🔥 smooth */
 }
 
+/* 🔥 WHEN SCROLL */
+.navbar-container.scrolled {
+  top: 0; /* move up */
+}
+.main-content {
+  padding-top: 110px; /* TopBar(30) + Navbar(80) */
+}
 /* Left side with the white logo block */
 .navbar-left {
   height: 100%;
@@ -336,5 +346,43 @@
   }
   .comp-titlebar{
     height: 18vh;
+  }
+}
+/* ================= TOP CONTACT BAR ================= */
+
+.topbar {
+  width: 100%;
+  height: 30px;
+  background: #008cdb;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;   /* ✅ ADD */
+  z-index: 10000;       /* ✅ ADD */
+}
+
+.topbar-inner {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+   position: relative;
+  z-index: 1000;
+}
+/* OPTIONAL: clickable */
+.topbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .topbar-inner {
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
   }
 }
