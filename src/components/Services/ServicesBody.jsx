@@ -1,3 +1,4 @@
+import { useState } from "react"; 
 import "../../styles/Services.css";
 
 // BRAND PRODUCTS
@@ -76,39 +77,66 @@ const ownProducts = [
   { img: testingPanel, title: "Electrical Testing Panel" }
 ];
 
+ 
 function ServicesBody() {
+  const [search, setSearch] = useState("");
+
+  // 🔍 FILTER LOGIC
+  const filteredBrand = brandProducts.filter((service) =>
+    service.title.toLowerCase().includes(search.toLowerCase())
+  );
+
+  const filteredOwn = ownProducts.filter((service) =>
+    service.title.toLowerCase().includes(search.toLowerCase())
+  );
   return (
     <div className="services-wrapper">
       <div className="services-container">
-        {/* BRAND PRODUCTS */}
 
+        {/* 🔍 SEARCH */}
+        <div className="services-search">
+          <input
+            type="text"
+            placeholder="Search products or services (e.g. ABB, Panel)"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </div>
+
+        {/* ===== BRAND PRODUCTS ===== */}
         <h2 className="services-section-title">Brand Products</h2>
 
         <div className="services-grid">
-          {brandProducts.map((service, index) => (
-            <div className="services-card" key={index}>
-              <div className="services-image-box">
-                <img src={service.img} alt={service.title} />
+          {filteredBrand.length > 0 ? (
+            filteredBrand.map((service, index) => (
+              <div className="services-card" key={index}>
+                <div className="services-image-box">
+                  <img src={service.img} alt={service.title} />
+                </div>
+                <h3 className="services-title">{service.title}</h3>
               </div>
-              <h3 className="services-title">{service.title}</h3>
-            </div>
-          ))}
+            ))
+          ) : (
+            <p className="no-result">No matching brand products</p>
+          )}
         </div>
 
-
-        {/* OUR PRODUCTS */}
-
+        {/* ===== OUR PRODUCTS ===== */}
         <h2 className="services-section-title">Our Products</h2>
 
         <div className="services-grid">
-          {ownProducts.map((service, index) => (
-            <div className="services-card" key={index}>
-              <div className="services-image-box">
-                <img src={service.img} alt={service.title} />
+          {filteredOwn.length > 0 ? (
+            filteredOwn.map((service, index) => (
+              <div className="services-card" key={index}>
+                <div className="services-image-box">
+                  <img src={service.img} alt={service.title} />
+                </div>
+                <h3 className="services-title">{service.title}</h3>
               </div>
-              <h3 className="services-title">{service.title}</h3>
-            </div>
-          ))}
+            ))
+          ) : (
+            <p className="no-result">No matching products</p>
+          )}
         </div>
 
       </div>
